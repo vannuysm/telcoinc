@@ -87,6 +87,7 @@
 		ECE9157B2042F3A5007FCF27 /* GeolocationFixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE9157A2042F3A5007FCF27 /* GeolocationFixture.swift */; };
 		ECE9157D2042F48C007FCF27 /* Geolocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE9157C2042F48C007FCF27 /* Geolocation.swift */; };
 		ECEF37212042FB3D007EA4CE /* GeolocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEF37202042FB3D007EA4CE /* GeolocationViewController.swift */; };
+		ECEF37232043054A007EA4CE /* DescriptionFixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEF37222043054A007EA4CE /* DescriptionFixture.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -181,6 +182,7 @@
 		ECE9157A2042F3A5007FCF27 /* GeolocationFixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GeolocationFixture.swift; path = Fixtures/GeolocationFixture.swift; sourceTree = "<group>"; };
 		ECE9157C2042F48C007FCF27 /* Geolocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geolocation.swift; sourceTree = "<group>"; };
 		ECEF37202042FB3D007EA4CE /* GeolocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeolocationViewController.swift; sourceTree = "<group>"; };
+		ECEF37222043054A007EA4CE /* DescriptionFixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DescriptionFixture.swift; path = Fixtures/DescriptionFixture.swift; sourceTree = "<group>"; };
 		ED095305CA0D3A5B159D95B3 /* ProductText.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProductText.swift; path = "Proxy Classes/com.sap.edm.sampleservice/public/ProductText.swift"; sourceTree = "<group>"; };
 		ED55335E4ABB7FF61352FDEE /* ESPMContainerFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ESPMContainerFactory.swift; path = "Proxy Classes/com.sap.edm.sampleservice/internal/ESPMContainerFactory.swift"; sourceTree = "<group>"; };
 		F594BFB6A612AB9E872806FB /* PurchaseOrderItemsDetailViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PurchaseOrderItemsDetailViewController.swift; path = PurchaseOrderItems/PurchaseOrderItemsDetailViewController.swift; sourceTree = "<group>"; };
@@ -440,6 +442,7 @@
 			isa = PBXGroup;
 			children = (
 				ECE9157A2042F3A5007FCF27 /* GeolocationFixture.swift */,
+				ECEF37222043054A007EA4CE /* DescriptionFixture.swift */,
 			);
 			name = Fixtures;
 			sourceTree = "<group>";
@@ -573,6 +576,7 @@
 				62E856FD48CC84347763C6EB /* CustomersMasterViewController.swift in Sources */,
 				1AA44DDB8F191C0D0D21E733 /* CustomersDetailViewController.swift in Sources */,
 				3755542A02A5D893548EE8A2 /* PurchaseOrderHeadersMasterViewController.swift in Sources */,
+				ECEF37232043054A007EA4CE /* DescriptionFixture.swift in Sources */,
 				ECEF37212042FB3D007EA4CE /* GeolocationViewController.swift in Sources */,
 				ECE9157B2042F3A5007FCF27 /* GeolocationFixture.swift in Sources */,
 				17F80ED0302A481958F7A203 /* PurchaseOrderHeadersDetailViewController.swift in Sources */,
