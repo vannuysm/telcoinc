@@ -16,9 +16,18 @@ class DetailViewController: AbstractViewController {
     
     var data: [SalesOrderItem] = []
     
+    var orderId: String!
+    
     @IBOutlet weak var tableView: UITableView!
     
-    init() {
+    
+    
+    convenience init(_ orderId: String) {
+        self.init()
+        self.orderId = orderId
+    }
+    
+    fileprivate init() {
         super.init(nibName: "DetailViewController", bundle: nil)
     }
     
@@ -66,7 +75,7 @@ class DetailViewController: AbstractViewController {
     
     func loadData() {
         let query = DataQuery()
-            .filter(SalesOrderItem.salesOrderID.equal("500000110"))
+            .filter(SalesOrderItem.salesOrderID.equal(orderId))
          provider.fetchSalesOrderItems(matching: query) { (items, error) in
             //var item = items?.first
             self.data = items ?? []
