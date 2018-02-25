@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03B9037E2042F313005B5863 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B9037D2042F313005B5863 /* DetailViewController.swift */; };
+		03B903802042F387005B5863 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03B9037F2042F387005B5863 /* DetailViewController.xib */; };
+		03B903822042F8D4005B5863 /* AbstractViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B903812042F8D4005B5863 /* AbstractViewController.swift */; };
 		08DF6D3B2042E4E4000C7AD7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DF6D3A2042E4E4000C7AD7 /* MapViewController.swift */; };
 		08DF6D3D2042F5A4000C7AD7 /* Worksite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DF6D3C2042F5A4000C7AD7 /* Worksite.swift */; };
 		09F84DC1C06D2C305E6CE8FD /* ESPMContainerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED55335E4ABB7FF61352FDEE /* ESPMContainerFactory.swift */; };
@@ -108,6 +111,9 @@
 /* Begin PBXFileReference section */
 		038169F3F9EF385D18F5396B /* Base */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SalesOrderItems.storyboard; sourceTree = "<group>"; };
 		03A80059AD88AB6FE7FE9F65 /* ESPMContainerStaticResolver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ESPMContainerStaticResolver.swift; path = "Proxy Classes/com.sap.edm.sampleservice/internal/ESPMContainerStaticResolver.swift"; sourceTree = "<group>"; };
+		03B9037D2042F313005B5863 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		03B9037F2042F387005B5863 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		03B903812042F8D4005B5863 /* AbstractViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractViewController.swift; sourceTree = "<group>"; };
 		08DF6D3A2042E4E4000C7AD7 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		08DF6D3C2042F5A4000C7AD7 /* Worksite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Worksite.swift; sourceTree = "<group>"; };
 		0A5B82942687D07B19A5A3D4 /* SuppliersMasterViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SuppliersMasterViewController.swift; path = Suppliers/SuppliersMasterViewController.swift; sourceTree = "<group>"; };
@@ -351,8 +357,11 @@
 				75D373EF1DD1FB0800888D4C /* Proxy Classes */,
 				755C10B41D5C63B000ECF6A2 /* Utils */,
 				7A1315B81D4B982000A5DA56 /* AppDelegate.swift */,
+				03B903812042F8D4005B5863 /* AbstractViewController.swift */,
 				08DF6D3A2042E4E4000C7AD7 /* MapViewController.swift */,
 				CBCA7A9B1E3778A9001AF49E /* Main.storyboard */,
+				03B9037D2042F313005B5863 /* DetailViewController.swift */,
+				03B9037F2042F387005B5863 /* DetailViewController.xib */,
 				7A1315C11D4B982000A5DA56 /* Assets.xcassets */,
 				7A1315C31D4B982000A5DA56 /* LaunchScreen.storyboard */,
 				1277F7601F8E66AC0060AF58 /* SAPLogo@2x.png */,
@@ -509,6 +518,7 @@
 			files = (
 				7A16F06D1FD1B3C700D2FABD /* README.md in Resources */,
 				7A1315C51D4B982000A5DA56 /* LaunchScreen.storyboard in Resources */,
+				03B903802042F387005B5863 /* DetailViewController.xib in Resources */,
 				12D066CF1F4DDB0E0075EBA4 /* ConfigurationProvider.plist in Resources */,
 				7A1315C21D4B982000A5DA56 /* Assets.xcassets in Resources */,
 				CBCA7A991E3778A9001AF49E /* Main.storyboard in Resources */,
@@ -559,6 +569,7 @@
 				87690EA4243330B96D612C9C /* ProductText.swift in Sources */,
 				ECE9157D2042F48C007FCF27 /* Geolocation.swift in Sources */,
 				2FEF24A8945938AD0A1E22A9 /* Supplier.swift in Sources */,
+				03B9037E2042F313005B5863 /* DetailViewController.swift in Sources */,
 				62E856FD48CC84347763C6EB /* CustomersMasterViewController.swift in Sources */,
 				1AA44DDB8F191C0D0D21E733 /* CustomersDetailViewController.swift in Sources */,
 				3755542A02A5D893548EE8A2 /* PurchaseOrderHeadersMasterViewController.swift in Sources */,
@@ -582,6 +593,7 @@
 				202395F2191715B392EC5B7A /* SuppliersDetailViewController.swift in Sources */,
 				2B1EF123031733A6F730BCE7 /* PurchaseOrderItemsMasterViewController.swift in Sources */,
 				6633E0DD7E8FE33B468C2C9A /* PurchaseOrderItemsDetailViewController.swift in Sources */,
+				03B903822042F8D4005B5863 /* AbstractViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
