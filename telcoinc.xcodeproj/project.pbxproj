@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08DF6D3B2042E4E4000C7AD7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DF6D3A2042E4E4000C7AD7 /* MapViewController.swift */; };
 		09F84DC1C06D2C305E6CE8FD /* ESPMContainerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED55335E4ABB7FF61352FDEE /* ESPMContainerFactory.swift */; };
 		126C8F6345CD75547E784FFE /* SalesOrderHeadersDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CEB4DCD96B4FC68833B5C /* SalesOrderHeadersDetailViewController.swift */; };
 		1277F7611F8E66AF0060AF58 /* SAPLogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1277F7601F8E66AC0060AF58 /* SAPLogo@2x.png */; };
@@ -101,8 +102,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		038169F3F9EF385D18F5396B /* Base */ = {isa = PBXFileReference; includeInIndex = ""; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SalesOrderItems.storyboard; sourceTree = "<group>"; };
+		038169F3F9EF385D18F5396B /* Base */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SalesOrderItems.storyboard; sourceTree = "<group>"; };
 		03A80059AD88AB6FE7FE9F65 /* ESPMContainerStaticResolver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ESPMContainerStaticResolver.swift; path = "Proxy Classes/com.sap.edm.sampleservice/internal/ESPMContainerStaticResolver.swift"; sourceTree = "<group>"; };
+		08DF6D3A2042E4E4000C7AD7 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		0A5B82942687D07B19A5A3D4 /* SuppliersMasterViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SuppliersMasterViewController.swift; path = Suppliers/SuppliersMasterViewController.swift; sourceTree = "<group>"; };
 		1277F7601F8E66AC0060AF58 /* SAPLogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SAPLogo@2x.png"; sourceTree = "<group>"; };
 		128604D91E55B41600C698B5 /* SAPCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SAPCommon.framework; sourceTree = "<group>"; };
@@ -113,20 +115,20 @@
 		12E84FE21F4ECC3E0061C99E /* SAPFioriFlows.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SAPFioriFlows.framework; sourceTree = "<group>"; };
 		211AA5B01DB6AD450C1E6C32 /* SalesOrderHeader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SalesOrderHeader.swift; path = "Proxy Classes/com.sap.edm.sampleservice/public/SalesOrderHeader.swift"; sourceTree = "<group>"; };
 		211D48A3858B66474A6E9E1E /* StockDetailViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StockDetailViewController.swift; path = Stock/StockDetailViewController.swift; sourceTree = "<group>"; };
-		22A3784FC99C0A3317822FB5 /* Base */ = {isa = PBXFileReference; includeInIndex = ""; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ProductTexts.storyboard; sourceTree = "<group>"; };
+		22A3784FC99C0A3317822FB5 /* Base */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ProductTexts.storyboard; sourceTree = "<group>"; };
 		2D584CBF0C82791A6F9F8033 /* ESPMContainerMetadataChanges.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ESPMContainerMetadataChanges.swift; path = "Proxy Classes/com.sap.edm.sampleservice/internal/ESPMContainerMetadataChanges.swift"; sourceTree = "<group>"; };
 		302D263EAE3D20119E5C5FA9 /* SuppliersDetailViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SuppliersDetailViewController.swift; path = Suppliers/SuppliersDetailViewController.swift; sourceTree = "<group>"; };
 		3257288293CDCC348BB3722E /* Customer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Customer.swift; path = "Proxy Classes/com.sap.edm.sampleservice/public/Customer.swift"; sourceTree = "<group>"; };
-		35955AFBA2F82577B29D0362 /* Base */ = {isa = PBXFileReference; includeInIndex = ""; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Products.storyboard; sourceTree = "<group>"; };
+		35955AFBA2F82577B29D0362 /* Base */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Products.storyboard; sourceTree = "<group>"; };
 		3815460F75E505ECC08AA386 /* PurchaseOrderHeader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PurchaseOrderHeader.swift; path = "Proxy Classes/com.sap.edm.sampleservice/public/PurchaseOrderHeader.swift"; sourceTree = "<group>"; };
-		38F625935DFE1C55ABC5B8B3 /* Base */ = {isa = PBXFileReference; includeInIndex = ""; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SalesOrderHeaders.storyboard; sourceTree = "<group>"; };
+		38F625935DFE1C55ABC5B8B3 /* Base */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SalesOrderHeaders.storyboard; sourceTree = "<group>"; };
 		393A6826FCBAD3F3990C9AA8 /* ESPMContainerMetadata.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ESPMContainerMetadata.swift; path = "Proxy Classes/com.sap.edm.sampleservice/public/ESPMContainerMetadata.swift"; sourceTree = "<group>"; };
 		39FA3F7923D2E21E27230D90 /* CustomersDetailViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomersDetailViewController.swift; path = Customers/CustomersDetailViewController.swift; sourceTree = "<group>"; };
 		4883D3AFBA71FC877C535FE3 /* Product.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Product.swift; path = "Proxy Classes/com.sap.edm.sampleservice/public/Product.swift"; sourceTree = "<group>"; };
-		4DED560E3091F62768DFF50C /* Base */ = {isa = PBXFileReference; includeInIndex = ""; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/PurchaseOrderHeaders.storyboard; sourceTree = "<group>"; };
+		4DED560E3091F62768DFF50C /* Base */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/PurchaseOrderHeaders.storyboard; sourceTree = "<group>"; };
 		579579F824181C913306453A /* PurchaseOrderItemsMasterViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PurchaseOrderItemsMasterViewController.swift; path = PurchaseOrderItems/PurchaseOrderItemsMasterViewController.swift; sourceTree = "<group>"; };
 		57C8C149D5667A5A8E56B4C6 /* SalesOrderItemsDetailViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SalesOrderItemsDetailViewController.swift; path = SalesOrderItems/SalesOrderItemsDetailViewController.swift; sourceTree = "<group>"; };
-		588C8F4F59C956E03E37168B /* Base */ = {isa = PBXFileReference; includeInIndex = ""; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Stock.storyboard; sourceTree = "<group>"; };
+		588C8F4F59C956E03E37168B /* Base */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Stock.storyboard; sourceTree = "<group>"; };
 		5918A75243AB81A0578FDE27 /* Supplier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Supplier.swift; path = "Proxy Classes/com.sap.edm.sampleservice/public/Supplier.swift"; sourceTree = "<group>"; };
 		634B8141DF1ED5DEBEFC6A30 /* ProductCategoriesDetailViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProductCategoriesDetailViewController.swift; path = ProductCategories/ProductCategoriesDetailViewController.swift; sourceTree = "<group>"; };
 		67810E23D1B2A15794B93F68 /* ProductTextsDetailViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProductTextsDetailViewController.swift; path = ProductTexts/ProductTextsDetailViewController.swift; sourceTree = "<group>"; };
@@ -148,21 +150,21 @@
 		7A26CA1B1F31BA8800B156B6 /* CellCreationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellCreationHelper.swift; sourceTree = "<group>"; };
 		7A9F6FF51F3883D3000A1815 /* SAPFioriLoadingIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAPFioriLoadingIndicator.swift; sourceTree = "<group>"; };
 		7D4FFF380FC034F65B3CAE3D /* SalesOrderHeadersMasterViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SalesOrderHeadersMasterViewController.swift; path = SalesOrderHeaders/SalesOrderHeadersMasterViewController.swift; sourceTree = "<group>"; };
-		824AF24E87D8E997E0863F99 /* Base */ = {isa = PBXFileReference; includeInIndex = ""; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Customers.storyboard; sourceTree = "<group>"; };
+		824AF24E87D8E997E0863F99 /* Base */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Customers.storyboard; sourceTree = "<group>"; };
 		8599F8D5AA16018862EF5E15 /* ESPMContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ESPMContainer.swift; path = "Proxy Classes/com.sap.edm.sampleservice/public/ESPMContainer.swift"; sourceTree = "<group>"; };
 		86BECE1131C6F5F1643DEE16 /* Stock.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Stock.swift; path = "Proxy Classes/com.sap.edm.sampleservice/public/Stock.swift"; sourceTree = "<group>"; };
 		8B64DA3B6E2B68F68D6AE70D /* ESPMContainerMetadataText.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ESPMContainerMetadataText.swift; path = "Proxy Classes/com.sap.edm.sampleservice/internal/ESPMContainerMetadataText.swift"; sourceTree = "<group>"; };
 		8E8917CC7C6DEADAC88A97F5 /* SalesOrderItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SalesOrderItem.swift; path = "Proxy Classes/com.sap.edm.sampleservice/public/SalesOrderItem.swift"; sourceTree = "<group>"; };
-		90965307854957E49675A8CC /* Base */ = {isa = PBXFileReference; includeInIndex = ""; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ProductCategories.storyboard; sourceTree = "<group>"; };
+		90965307854957E49675A8CC /* Base */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ProductCategories.storyboard; sourceTree = "<group>"; };
 		AC506AFFF1C7454C7A4EF8BF /* ProductsMasterViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProductsMasterViewController.swift; path = Products/ProductsMasterViewController.swift; sourceTree = "<group>"; };
 		BA7701B8D7A175A7B5F3C7BC /* ProductCategory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProductCategory.swift; path = "Proxy Classes/com.sap.edm.sampleservice/public/ProductCategory.swift"; sourceTree = "<group>"; };
-		BB270D3901B3338583485DB0 /* Base */ = {isa = PBXFileReference; includeInIndex = ""; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/PurchaseOrderItems.storyboard; sourceTree = "<group>"; };
+		BB270D3901B3338583485DB0 /* Base */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/PurchaseOrderItems.storyboard; sourceTree = "<group>"; };
 		C12CEB4DCD96B4FC68833B5C /* SalesOrderHeadersDetailViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SalesOrderHeadersDetailViewController.swift; path = SalesOrderHeaders/SalesOrderHeadersDetailViewController.swift; sourceTree = "<group>"; };
 		C76F40F68A4C51E4A32F4557 /* ESPMContainerMetadataParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ESPMContainerMetadataParser.swift; path = "Proxy Classes/com.sap.edm.sampleservice/internal/ESPMContainerMetadataParser.swift"; sourceTree = "<group>"; };
 		CB909D801E38CA8800218154 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D6041792336A683191A1D3C9 /* StockMasterViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StockMasterViewController.swift; path = Stock/StockMasterViewController.swift; sourceTree = "<group>"; };
 		DC2B531024C45F517A582629 /* ProductCategoriesMasterViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProductCategoriesMasterViewController.swift; path = ProductCategories/ProductCategoriesMasterViewController.swift; sourceTree = "<group>"; };
-		E94BE07C8A480DEAAD843209 /* Base */ = {isa = PBXFileReference; includeInIndex = ""; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Suppliers.storyboard; sourceTree = "<group>"; };
+		E94BE07C8A480DEAAD843209 /* Base */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Suppliers.storyboard; sourceTree = "<group>"; };
 		E97797EDFBC5284D41FFF817 /* CustomersMasterViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomersMasterViewController.swift; path = Customers/CustomersMasterViewController.swift; sourceTree = "<group>"; };
 		E9D24D594F86F62105289754 /* SalesOrderItemsMasterViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SalesOrderItemsMasterViewController.swift; path = SalesOrderItems/SalesOrderItemsMasterViewController.swift; sourceTree = "<group>"; };
 		ED095305CA0D3A5B159D95B3 /* ProductText.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProductText.swift; path = "Proxy Classes/com.sap.edm.sampleservice/public/ProductText.swift"; sourceTree = "<group>"; };
@@ -339,6 +341,7 @@
 				75D373EF1DD1FB0800888D4C /* Proxy Classes */,
 				755C10B41D5C63B000ECF6A2 /* Utils */,
 				7A1315B81D4B982000A5DA56 /* AppDelegate.swift */,
+				08DF6D3A2042E4E4000C7AD7 /* MapViewController.swift */,
 				CBCA7A9B1E3778A9001AF49E /* Main.storyboard */,
 				7A1315C11D4B982000A5DA56 /* Assets.xcassets */,
 				7A1315C31D4B982000A5DA56 /* LaunchScreen.storyboard */,
@@ -522,6 +525,7 @@
 				5946A99AE3CF0A94EAC8C8F8 /* ESPMContainerMetadataText.swift in Sources */,
 				37F18352B19659380A7B041F /* ESPMContainerMetadataChanges.swift in Sources */,
 				191BB90D9E5C34A5F843404A /* ESPMContainer.swift in Sources */,
+				08DF6D3B2042E4E4000C7AD7 /* MapViewController.swift in Sources */,
 				91601173337B8D873779BC65 /* ProductCategory.swift in Sources */,
 				51B22D2AD6323A078392BBEC /* SalesOrderHeader.swift in Sources */,
 				7B196BDBD61FA7E6DD0EE3A7 /* SalesOrderItem.swift in Sources */,
@@ -797,6 +801,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -820,6 +825,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
