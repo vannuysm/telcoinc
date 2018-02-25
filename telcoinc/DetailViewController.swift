@@ -86,9 +86,17 @@ class DetailViewController: AbstractViewController {
     
     //MARK: Action
     
-    @IBAction func closeAction(_ sender: Any) throws {
-        if (try provider.updateSalesOrderStatus(id: "500000110", newStatus: "C") == true) {
-            navigationController?.popViewController(animated: true)
+    @IBAction func closeAction(_ sender: Any) {
+        do {
+            if (try provider.updateSalesOrderStatus(id: orderId, newStatus: "A") == true) {
+                navigationController?.popViewController(animated: true)
+            }
+        } catch {
+            let alert = UIAlertController(title: "Failed", message: "Failed to update status.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .`default`, handler: { _ in
+                NSLog("Failed to update status: \(error)")
+            }))
+            self.present(alert, animated: true, completion: nil)
         }
     }
     
