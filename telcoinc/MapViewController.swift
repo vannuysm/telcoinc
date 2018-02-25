@@ -10,6 +10,7 @@ import UIKit
 import MapKit
 import SAPFiori
 import CoreLocation
+import SAPOData
 
 class MapViewController: AbstractViewController, MKMapViewDelegate, CLLocationManagerDelegate, UITableViewDelegate, UITableViewDataSource, SearchDelegateDelegate {
     
@@ -75,7 +76,9 @@ class MapViewController: AbstractViewController, MKMapViewDelegate, CLLocationMa
     }
     
     func getWorksites() {
-        guard let headers = try? provider.fetchSalesOrderHeaders() else {
+        let query = DataQuery().filter(SalesOrderHeader.lifeCycleStatus.equal("N"))
+        
+        guard let headers = try? provider.fetchSalesOrderHeaders(matching: query) else {
             return
         }
         

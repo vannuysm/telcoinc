@@ -86,8 +86,10 @@ class DetailViewController: AbstractViewController {
     
     //MARK: Action
     
-    @IBAction func closeAction(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
+    @IBAction func closeAction(_ sender: Any) throws {
+        if (try provider.updateSalesOrderStatus(id: "500000110", newStatus: "C") == true) {
+            navigationController?.popViewController(animated: true)
+        }
     }
     
 }
