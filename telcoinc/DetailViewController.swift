@@ -32,6 +32,7 @@ class DetailViewController: UIViewController {
         objectHeader = FUIObjectHeader()
         
         tableView.tableHeaderView = objectHeader
+        tableView.estimatedRowHeight = 80
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.separatorStyle = .none
         
@@ -43,7 +44,7 @@ class DetailViewController: UIViewController {
             objectHeader.bodyText = "1000-Hamburg\nMECHANIC"
             objectHeader.bodyLabel.numberOfLines = 2 // Set number of lines for this example
             objectHeader.footnoteText = "Due on 12/31/16"
-            objectHeader.descriptionText = "Temperature sensor predicts overheating failure in 4 days. Urgent and needs attention!"
+            //objectHeader.descriptionText = "Temperature sensor predicts overheating failure in 4 days. Urgent and needs attention!"
             objectHeader.statusText = "High"
             //objectHeader.detailImage = UIImage() // TODO: Replace with your image
             //objectHeader.substatusImage = UIImage() // TODO: Replace with your image
@@ -63,16 +64,21 @@ class DetailViewController: UIViewController {
 extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
     //MARK: UITableViewDataSource
     
-    /*func numberOfSections(in tableView: UITableView) -> Int {
-        return
-    }*/
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: FUIObjectTableViewCell.reuseIdentifier, for: indexPath) as! FUIObjectTableViewCell
+        
+        cell.headlineText = "Speed Mouse"
+        cell.subheadlineText = "HT-1061"
+        cell.descriptionText = "Optical USB, PS/2 Mouse, Color: Blue, 3-button-functionality (incl. Scroll wheel)"
+        cell.statusText = "7.00 USD"
+        cell.substatusText = "In Stock"
+        cell.substatusLabel.textColor = .preferredFioriColor(forStyle: .positive)
+        cell.accessoryType = .none
+        cell.splitPercent = CGFloat(0.3)
         
         return cell
     }
@@ -82,26 +88,6 @@ extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
     }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
-    }
-    
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        
-    }
-    
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        
-    }
-    
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        
-    }
-    
-    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        
-    }*/
-    
+    */
     
 }
