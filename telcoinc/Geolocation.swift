@@ -7,12 +7,17 @@
 //
 
 import Foundation
+import CoreLocation
 
 public class Geolocation {
-    public private(set) var latitude: Decimal
-    public private(set) var longitude: Decimal
+    public private(set) var latitude: Double
+    public private(set) var longitude: Double
     
-    public init(latitude: Decimal, longitude: Decimal) {
+    public var coordinate: CLLocationCoordinate2D {
+        return CLLocationCoordinate2D(latitude: CLLocationDegrees(latitude), longitude: CLLocationDegrees(longitude))
+    }
+    
+    public init(latitude: Double, longitude: Double) {
         self.latitude = latitude
         self.longitude = longitude
     }

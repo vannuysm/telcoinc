@@ -11,7 +11,7 @@ import MapKit
 import SAPFiori
 import CoreLocation
 
-class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UITableViewDelegate, UITableViewDataSource {
+class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
     @IBOutlet var mapView: MKMapView!
     @IBOutlet var mapViewHeightConstraint: NSLayoutConstraint!
@@ -20,9 +20,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     private var current: CLLocation?
     private let regionRadius: CLLocationDistance = 1000
     
-    private let worksites: [Worksite] = [
-        Worksite(coordinate: CLLocation(latitude: 41.392789, longitude: 2.167397).coordinate)
-    ]
+    private var worksites: [Worksite] = []
     
     private var container: FUIDetailPanelContainer!
     
@@ -36,13 +34,18 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         mapView.register(WorksiteMarker.self, forAnnotationViewWithReuseIdentifier: "FUIMarkerAnnotationView")
         
         mapViewHeightConstraint.constant = UIScreen.main.bounds.height
-        mapView.addAnnotations(worksites)
         
         container = FUIDetailPanelContainer(parentViewController: self, mapView: mapView)
         container.contentViewController.headlineText = "Headline Text"
         container.contentViewController.didSelectTitleHandler = {
             print("didSelectTitleHandler called!")
         }
+        
+        container.searchResultsViewController.tableView.dataSource = self
+        container.searchResultsViewController.tableView.delegate = self
+        container.searchResultsViewController.tableView.register(FUIObjectTableViewCell.self, forCellReuseIdentifier: FUIObjectTableViewCell.reuseIdentifier)
+        container.searchResultsViewController.searchBar.delegate = self
+        
         container.contentViewController.subheadlineText = "Subheadline Text"
         container.contentViewController.tableView.delegate = self
         container.contentViewController.tableView.register(FUIObjectTableViewCell.self, forCellReuseIdentifier: FUIObjectTableViewCell.reuseIdentifier)
@@ -51,6 +54,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         container.contentViewController.tableView.register(FUIMapDetailActionTableViewCell.self, forCellReuseIdentifier: FUIMapDetailActionTableViewCell.reuseIdentifier)
         container.contentViewController.tableView.estimatedRowHeight = 100
         container.contentViewController.tableView.rowHeight = UITableViewAutomaticDimension
+        
+        getWorksites()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -59,6 +64,20 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         locationManager.requestAlwaysAuthorization()
         locationManager.startUpdatingLocation()
         container!.presentContainer()
+    }
+    
+    func getWorksites() {
+        guard let container = (UIApplication.shared.delegate as! AppDelegate).espmContainer else {
+            return
+        }
+        
+        guard let headers = try? container.fetchSalesOrderHeaders() else {
+            return
+        }
+        
+        self.worksites = headers.flatMap { Worksite(salesOrderHeader: $0) }
+        
+        mapView.addAnnotations(worksites)
     }
     
     private func centerMapOnLocation(location: CLLocation, animated: Bool = true) {

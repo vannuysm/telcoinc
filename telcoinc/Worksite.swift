@@ -12,10 +12,14 @@ import SAPFiori
 
 class Worksite: MKPointAnnotation {
     
-    init(coordinate: CLLocationCoordinate2D) {
+    var salesOrderHeader: SalesOrderHeader
+    
+    init(salesOrderHeader: SalesOrderHeader) {
+        self.salesOrderHeader = salesOrderHeader
+        
         super.init()
         
-        self.coordinate = coordinate
+        self.coordinate = GeolocationFixture.create().coordinate
     }
     
 }
