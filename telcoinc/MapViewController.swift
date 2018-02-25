@@ -39,6 +39,7 @@ class MapViewController: AbstractViewController, MKMapViewDelegate, CLLocationMa
         container.contentViewController.headlineText = "Headline Text"
         container.contentViewController.didSelectTitleHandler = {
             print("didSelectTitleHandler called!")
+            self.navigationController?.pushViewController(DetailViewController(), animated: true)
         }
         
         container.searchResultsViewController.tableView.dataSource = self

@@ -70,11 +70,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 
     private func setRootViewController() {
         DispatchQueue.main.async {
-            let viewController = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateInitialViewController()
+            let viewController = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateInitialViewController()!
 
-            viewController?.modalPresentationStyle = .currentContext
+            viewController.modalPresentationStyle = .currentContext
             
-            self.window!.rootViewController = viewController
+            self.window!.rootViewController = UINavigationController(rootViewController: viewController)
         }
     }
 
