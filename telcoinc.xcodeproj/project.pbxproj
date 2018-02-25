@@ -80,6 +80,9 @@
 		E449E17C04F097B34F9B9A69 /* ProductTextsMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA2E5939215FDFE4CC6A0C3 /* ProductTextsMasterViewController.swift */; };
 		E62C41902C39D4B12BDFB0D6 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4883D3AFBA71FC877C535FE3 /* Product.swift */; };
 		E7A19E89527578B246FF95F7 /* StockDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211D48A3858B66474A6E9E1E /* StockDetailViewController.swift */; };
+		ECE9157B2042F3A5007FCF27 /* GeolocationFixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE9157A2042F3A5007FCF27 /* GeolocationFixture.swift */; };
+		ECE9157D2042F48C007FCF27 /* Geolocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE9157C2042F48C007FCF27 /* Geolocation.swift */; };
+		ECEF37212042FB3D007EA4CE /* GeolocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEF37202042FB3D007EA4CE /* GeolocationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -167,6 +170,9 @@
 		E94BE07C8A480DEAAD843209 /* Base */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Suppliers.storyboard; sourceTree = "<group>"; };
 		E97797EDFBC5284D41FFF817 /* CustomersMasterViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomersMasterViewController.swift; path = Customers/CustomersMasterViewController.swift; sourceTree = "<group>"; };
 		E9D24D594F86F62105289754 /* SalesOrderItemsMasterViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SalesOrderItemsMasterViewController.swift; path = SalesOrderItems/SalesOrderItemsMasterViewController.swift; sourceTree = "<group>"; };
+		ECE9157A2042F3A5007FCF27 /* GeolocationFixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GeolocationFixture.swift; path = Fixtures/GeolocationFixture.swift; sourceTree = "<group>"; };
+		ECE9157C2042F48C007FCF27 /* Geolocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geolocation.swift; sourceTree = "<group>"; };
+		ECEF37202042FB3D007EA4CE /* GeolocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeolocationViewController.swift; sourceTree = "<group>"; };
 		ED095305CA0D3A5B159D95B3 /* ProductText.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProductText.swift; path = "Proxy Classes/com.sap.edm.sampleservice/public/ProductText.swift"; sourceTree = "<group>"; };
 		ED55335E4ABB7FF61352FDEE /* ESPMContainerFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ESPMContainerFactory.swift; path = "Proxy Classes/com.sap.edm.sampleservice/internal/ESPMContainerFactory.swift"; sourceTree = "<group>"; };
 		F594BFB6A612AB9E872806FB /* PurchaseOrderItemsDetailViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PurchaseOrderItemsDetailViewController.swift; path = PurchaseOrderItems/PurchaseOrderItemsDetailViewController.swift; sourceTree = "<group>"; };
@@ -273,6 +279,7 @@
 			isa = PBXGroup;
 			children = (
 				12E07EF11E96851800460A94 /* CollectionType.swift */,
+				ECE9157C2042F48C007FCF27 /* Geolocation.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -335,6 +342,7 @@
 		7A1315B71D4B982000A5DA56 /* telcoinc */ = {
 			isa = PBXGroup;
 			children = (
+				ECE915792042F2A8007FCF27 /* Fixtures */,
 				12D066CB1F4DDAE40075EBA4 /* Onboarding */,
 				7532C1BB1D5B6917004B03AF /* Model */,
 				75AC42C81DAF80C000B445FF /* ViewControllers */,
@@ -347,6 +355,7 @@
 				7A1315C31D4B982000A5DA56 /* LaunchScreen.storyboard */,
 				1277F7601F8E66AC0060AF58 /* SAPLogo@2x.png */,
 				7A1315C61D4B982000A5DA56 /* Info.plist */,
+				ECEF37202042FB3D007EA4CE /* GeolocationViewController.swift */,
 			);
 			path = telcoinc;
 			sourceTree = "<group>";
@@ -413,6 +422,14 @@
 				2D584CBF0C82791A6F9F8033 /* ESPMContainerMetadataChanges.swift */,
 			);
 			name = internal;
+			sourceTree = "<group>";
+		};
+		ECE915792042F2A8007FCF27 /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				ECE9157A2042F3A5007FCF27 /* GeolocationFixture.swift */,
+			);
+			name = Fixtures;
 			sourceTree = "<group>";
 		};
 		FF480CBFFE0C25EF75758E85 /* PurchaseOrderHeaders */ = {
@@ -536,10 +553,13 @@
 				7EF16F49D1841665ED6DBC0E /* PurchaseOrderHeader.swift in Sources */,
 				E62C41902C39D4B12BDFB0D6 /* Product.swift in Sources */,
 				87690EA4243330B96D612C9C /* ProductText.swift in Sources */,
+				ECE9157D2042F48C007FCF27 /* Geolocation.swift in Sources */,
 				2FEF24A8945938AD0A1E22A9 /* Supplier.swift in Sources */,
 				62E856FD48CC84347763C6EB /* CustomersMasterViewController.swift in Sources */,
 				1AA44DDB8F191C0D0D21E733 /* CustomersDetailViewController.swift in Sources */,
 				3755542A02A5D893548EE8A2 /* PurchaseOrderHeadersMasterViewController.swift in Sources */,
+				ECEF37212042FB3D007EA4CE /* GeolocationViewController.swift in Sources */,
+				ECE9157B2042F3A5007FCF27 /* GeolocationFixture.swift in Sources */,
 				17F80ED0302A481958F7A203 /* PurchaseOrderHeadersDetailViewController.swift in Sources */,
 				9D521AD2D66E8BC260070CDD /* StockMasterViewController.swift in Sources */,
 				E7A19E89527578B246FF95F7 /* StockDetailViewController.swift in Sources */,
