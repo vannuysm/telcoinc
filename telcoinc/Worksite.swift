@@ -12,7 +12,7 @@ import SAPFiori
 
 class Worksite: MKPointAnnotation {
     
-    var salesOrderHeader: SalesOrderHeader
+    public var salesOrderHeader: SalesOrderHeader
     
     init(salesOrderHeader: SalesOrderHeader) {
         self.salesOrderHeader = salesOrderHeader
@@ -34,6 +34,8 @@ class WorksiteMarker: FUIMarkerAnnotationView {
             priorityIcon =  FUIIconLibrary.map.marker.veryHighPriority
         }
     }
+    
+    var worksite: Worksite?
     
 }
 

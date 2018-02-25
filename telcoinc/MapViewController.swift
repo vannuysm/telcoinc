@@ -96,12 +96,13 @@ class MapViewController: AbstractViewController, MKMapViewDelegate, CLLocationMa
     // MARK: - MKMapViewDelegate
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        var view: MKAnnotationView!
-        if let pointAnnotation = annotation as? MKPointAnnotation {
-            view = FUIMarkerAnnotationView(annotation: pointAnnotation, reuseIdentifier: "FUIMarkerAnnotationView")
+        var view: WorksiteMarker!
+        if let pointAnnotation = annotation as? Worksite {
+            view = WorksiteMarker(annotation: pointAnnotation, reuseIdentifier: "FUIMarkerAnnotationView")
             let annotationImage = FUIIconLibrary.map.marker.job
-            (view as! FUIMarkerAnnotationView).glyphImage = annotationImage.withRenderingMode(.alwaysTemplate)
-            (view as! FUIMarkerAnnotationView).priorityIcon =  FUIIconLibrary.map.marker.veryHighPriority
+            view.glyphImage = annotationImage.withRenderingMode(.alwaysTemplate)
+            view.priorityIcon =  FUIIconLibrary.map.marker.veryHighPriority
+            view.worksite = pointAnnotation
         }
         return view
     }
@@ -109,8 +110,14 @@ class MapViewController: AbstractViewController, MKMapViewDelegate, CLLocationMa
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         let selectedAnnotation = view.annotation
         
-        container.contentViewController.headlineText = "Test"
-        container.contentViewController.subheadlineText = "Subtitle"
+        guard let view = view as? WorksiteMarker else {
+            return
+        }
+        
+        if let id = view.worksite?.salesOrderHeader.customerID {
+            container.contentViewController.headlineText = "ID: \(id)"
+        }
+        container.contentViewController.subheadlineText = view.worksite?.salesOrderHeader.lifeCycleStatusName
         
         DispatchQueue.main.async {
             self.container.pushChildViewController()
