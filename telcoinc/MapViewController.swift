@@ -11,7 +11,7 @@ import MapKit
 import SAPFiori
 import CoreLocation
 
-class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet var mapView: MKMapView!
     @IBOutlet var mapViewHeightConstraint: NSLayoutConstraint!
@@ -24,6 +24,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         Worksite(coordinate: CLLocation(latitude: 41.392789, longitude: 2.167397).coordinate)
     ]
     
+    private var container: FUIDetailPanelContainer!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,6 +37,20 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
         mapViewHeightConstraint.constant = UIScreen.main.bounds.height
         mapView.addAnnotations(worksites)
+        
+        container = FUIDetailPanelContainer(parentViewController: self, mapView: mapView)
+        container.contentViewController.headlineText = "Headline Text"
+        container.contentViewController.didSelectTitleHandler = {
+            print("didSelectTitleHandler called!")
+        }
+        container.contentViewController.subheadlineText = "Subheadline Text"
+        container.contentViewController.tableView.delegate = self
+        container.contentViewController.tableView.register(FUIObjectTableViewCell.self, forCellReuseIdentifier: FUIObjectTableViewCell.reuseIdentifier)
+        container.contentViewController.tableView.register(FUIMapDetailTagObjectTableViewCell.self, forCellReuseIdentifier: FUIMapDetailTagObjectTableViewCell.reuseIdentifier)
+        container.contentViewController.tableView.register(FUIMapDetailButtonTableViewCell.self, forCellReuseIdentifier: FUIMapDetailButtonTableViewCell.reuseIdentifier)
+        container.contentViewController.tableView.register(FUIMapDetailActionTableViewCell.self, forCellReuseIdentifier: FUIMapDetailActionTableViewCell.reuseIdentifier)
+        container.contentViewController.tableView.estimatedRowHeight = 100
+        container.contentViewController.tableView.rowHeight = UITableViewAutomaticDimension
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -42,6 +58,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
         locationManager.requestAlwaysAuthorization()
         locationManager.startUpdatingLocation()
+        container!.presentContainer()
     }
     
     private func centerMapOnLocation(location: CLLocation, animated: Bool = true) {
@@ -75,7 +92,49 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     }
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-        mapView.deselectAnnotation(view.annotation, animated: true)
+        let selectedAnnotation = view.annotation
+        
+        container.contentViewController.headlineText = "Test"
+        container.contentViewController.subheadlineText = "Subtitle"
+        
+        DispatchQueue.main.async {
+            self.container.pushChildViewController()
+        }
+        
+        for annotation in mapView.annotations {
+            if let annotation = annotation as? MKAnnotation, !annotation.isEqual(selectedAnnotation) {
+                self.container.contentViewController.tableView.dataSource = self
+                self.container.fitToContent()
+                DispatchQueue.main.async {
+                    self.container.pushChildViewController()
+                }
+                return
+            }
+        }
+    }
+    
+    func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {
+        let selectedAnnotation = view.annotation
+        
+        DispatchQueue.main.async {
+            if self.mapView.selectedAnnotations.isEmpty {
+                self.container.popChildViewController()
+            } else {
+                self.container.contentViewController.tableView.dataSource = self
+                self.container.fitToContent()
+                self.container.contentViewController.tableView.reloadData()
+            }
+        }
+    }
+    
+    // MARK: - UITableView
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
     }
     
 }
