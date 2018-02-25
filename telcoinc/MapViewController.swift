@@ -63,8 +63,6 @@ class MapViewController: AbstractViewController, MKMapViewDelegate, CLLocationMa
         container.contentViewController.tableView.register(FUIMapDetailActionTableViewCell.self, forCellReuseIdentifier: FUIMapDetailActionTableViewCell.reuseIdentifier)
         container.contentViewController.tableView.estimatedRowHeight = 100
         container.contentViewController.tableView.rowHeight = UITableViewAutomaticDimension
-        
-        getWorksites()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -73,6 +71,8 @@ class MapViewController: AbstractViewController, MKMapViewDelegate, CLLocationMa
         locationManager.requestAlwaysAuthorization()
         locationManager.startUpdatingLocation()
         container!.presentContainer()
+        
+        getWorksites()
     }
     
     func getWorksites() {
