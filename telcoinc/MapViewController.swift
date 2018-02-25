@@ -39,6 +39,7 @@ class MapViewController: AbstractViewController, MKMapViewDelegate, CLLocationMa
         container.contentViewController.headlineText = "Headline Text"
         container.contentViewController.didSelectTitleHandler = {
             print("didSelectTitleHandler called!")
+            self.presentedViewController?.dismiss(animated: false, completion: nil)
             self.navigationController?.pushViewController(DetailViewController(), animated: true)
         }
         
