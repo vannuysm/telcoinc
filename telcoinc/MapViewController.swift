@@ -40,7 +40,7 @@ class MapViewController: AbstractViewController, MKMapViewDelegate, CLLocationMa
         container.contentViewController.didSelectTitleHandler = {
             print("didSelectTitleHandler called!")
             self.presentedViewController?.dismiss(animated: false, completion: nil)
-            self.navigationController?.pushViewController(DetailViewController(), animated: true)
+            self.navigationController?.pushViewController(DetailViewController("500000110"), animated: true)
         }
         
         container.searchResultsViewController.tableView.dataSource = self
