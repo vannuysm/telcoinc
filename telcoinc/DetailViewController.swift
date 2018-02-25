@@ -8,8 +8,9 @@
 
 import UIKit
 import SAPFiori
+import SAPOData
 
-class DetailViewController: UIViewController {
+class DetailViewController: AbstractViewController {
     
     var objectHeader: FUIObjectHeader!
     
