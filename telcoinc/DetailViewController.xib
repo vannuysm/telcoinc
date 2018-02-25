@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController" customModule="telcoinc" customModuleProvider="target">
             <connections>
+                <outlet property="closeAction" destination="Vf4-D2-g51" id="dQ0-Pd-zH6"/>
                 <outlet property="tableView" destination="O2M-7c-LXT" id="ZTI-SP-2vD"/>
                 <outlet property="view" destination="iN0-l3-epB" id="KF3-ft-Wcq"/>
             </connections>
@@ -22,20 +23,34 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="O2M-7c-LXT">
-                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <rect key="frame" x="0.0" y="20" width="375" height="603"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="Ogf-Tu-w8x"/>
                         <outlet property="delegate" destination="-1" id="m2C-xh-ZkX"/>
                     </connections>
                 </tableView>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zut-T3-Q0S">
+                    <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                    <items>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="BPa-oj-Hxd"/>
+                        <barButtonItem title="Close" id="Vf4-D2-g51">
+                            <connections>
+                                <action selector="closeAction:" destination="-1" id="vHS-Ed-fm9"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="O2M-7c-LXT" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="4TN-GD-noF"/>
-                <constraint firstItem="O2M-7c-LXT" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="ID8-jk-Z59"/>
+                <constraint firstItem="zut-T3-Q0S" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="Aiz-k3-5v2"/>
+                <constraint firstItem="zut-T3-Q0S" firstAttribute="leading" secondItem="O2M-7c-LXT" secondAttribute="leading" id="GZ1-9S-kRQ"/>
                 <constraint firstItem="O2M-7c-LXT" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="QUC-nh-3Bx"/>
+                <constraint firstItem="zut-T3-Q0S" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="nU4-tJ-eB5"/>
                 <constraint firstItem="O2M-7c-LXT" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="y0h-8f-ETq"/>
+                <constraint firstItem="zut-T3-Q0S" firstAttribute="top" secondItem="O2M-7c-LXT" secondAttribute="bottom" id="zKn-vs-G6m"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
         </view>

@@ -65,7 +65,8 @@ class DetailViewController: AbstractViewController {
     //MARK: DATA
     
     func loadData() {
-        let query = DataQuery().filter(SalesOrderItem.salesOrderID.equal("500000110")).expand(SalesOrderItem.productDetails).expand(SalesOrderItem.productDetails)
+        let query = DataQuery()
+            .filter(SalesOrderItem.salesOrderID.equal("500000110"))
         //let query2 = DataQuery().selectAll()
         provider.fetchSalesOrderItems(matching: query) { (items, error) in
             var item = items?.first
@@ -73,6 +74,12 @@ class DetailViewController: AbstractViewController {
             self.tableView.reloadData()
             print("")
         }
+    }
+    
+    //MARK: Action
+    
+    @IBAction func closeAction(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
     }
     
 }
