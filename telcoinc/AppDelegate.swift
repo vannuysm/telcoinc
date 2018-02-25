@@ -9,8 +9,8 @@ import SAPFiori
 import SAPFioriFlows
 import SAPFoundation
 import SAPCommon
-
 import SAPOData
+import CoreLocation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDelegate, OnboardingManagerDelegate {

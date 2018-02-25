@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		08DF6D3B2042E4E4000C7AD7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DF6D3A2042E4E4000C7AD7 /* MapViewController.swift */; };
+		08DF6D3D2042F5A4000C7AD7 /* Worksite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DF6D3C2042F5A4000C7AD7 /* Worksite.swift */; };
 		09F84DC1C06D2C305E6CE8FD /* ESPMContainerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED55335E4ABB7FF61352FDEE /* ESPMContainerFactory.swift */; };
 		126C8F6345CD75547E784FFE /* SalesOrderHeadersDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CEB4DCD96B4FC68833B5C /* SalesOrderHeadersDetailViewController.swift */; };
 		1277F7611F8E66AF0060AF58 /* SAPLogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1277F7601F8E66AC0060AF58 /* SAPLogo@2x.png */; };
@@ -108,6 +109,7 @@
 		038169F3F9EF385D18F5396B /* Base */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SalesOrderItems.storyboard; sourceTree = "<group>"; };
 		03A80059AD88AB6FE7FE9F65 /* ESPMContainerStaticResolver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ESPMContainerStaticResolver.swift; path = "Proxy Classes/com.sap.edm.sampleservice/internal/ESPMContainerStaticResolver.swift"; sourceTree = "<group>"; };
 		08DF6D3A2042E4E4000C7AD7 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		08DF6D3C2042F5A4000C7AD7 /* Worksite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Worksite.swift; sourceTree = "<group>"; };
 		0A5B82942687D07B19A5A3D4 /* SuppliersMasterViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SuppliersMasterViewController.swift; path = Suppliers/SuppliersMasterViewController.swift; sourceTree = "<group>"; };
 		1277F7601F8E66AC0060AF58 /* SAPLogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SAPLogo@2x.png"; sourceTree = "<group>"; };
 		128604D91E55B41600C698B5 /* SAPCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SAPCommon.framework; sourceTree = "<group>"; };
@@ -356,6 +358,7 @@
 				1277F7601F8E66AC0060AF58 /* SAPLogo@2x.png */,
 				7A1315C61D4B982000A5DA56 /* Info.plist */,
 				ECEF37202042FB3D007EA4CE /* GeolocationViewController.swift */,
+				08DF6D3C2042F5A4000C7AD7 /* Worksite.swift */,
 			);
 			path = telcoinc;
 			sourceTree = "<group>";
@@ -475,6 +478,7 @@
 				TargetAttributes = {
 					7A1315B41D4B982000A5DA56 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = ZWE7Y5MFJ2;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
@@ -573,6 +577,7 @@
 				126C8F6345CD75547E784FFE /* SalesOrderHeadersDetailViewController.swift in Sources */,
 				AD0AF566D4B7C2571AD2B7F8 /* ProductsMasterViewController.swift in Sources */,
 				2D0502EB6174337F233419D9 /* ProductsDetailViewController.swift in Sources */,
+				08DF6D3D2042F5A4000C7AD7 /* Worksite.swift in Sources */,
 				CFDB9736093A8E4590E8F2FE /* SuppliersMasterViewController.swift in Sources */,
 				202395F2191715B392EC5B7A /* SuppliersDetailViewController.swift in Sources */,
 				2B1EF123031733A6F730BCE7 /* PurchaseOrderItemsMasterViewController.swift in Sources */,
@@ -807,7 +812,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = ZWE7Y5MFJ2;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -815,7 +820,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = telcoinc/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.willowtree.and.friends.telcoinc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -831,7 +836,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = ZWE7Y5MFJ2;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -839,7 +844,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = telcoinc/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.willowtree.and.friends.telcoinc;
 				PRODUCT_NAME = "$(TARGET_NAME)";

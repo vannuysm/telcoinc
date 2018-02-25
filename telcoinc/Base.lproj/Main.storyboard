@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="QN3-Dx-he4">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" rotateEnabled="NO" showsUserLocation="YES" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QN3-Dx-he4">
                                 <rect key="frame" x="0.0" y="64" width="375" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="zlw-Vf-6rB"/>
@@ -38,6 +38,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="TODAY" id="Pl2-iM-ost"/>
                     <connections>
+                        <outlet property="mapView" destination="QN3-Dx-he4" id="SBZ-vv-SUZ"/>
                         <outlet property="mapViewHeightConstraint" destination="zlw-Vf-6rB" id="Glj-1N-lHS"/>
                     </connections>
                 </viewController>
