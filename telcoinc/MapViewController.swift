@@ -11,7 +11,7 @@ import MapKit
 import SAPFiori
 import CoreLocation
 
-class MapViewController: AbstractViewController, MKMapViewDelegate, CLLocationManagerDelegate, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
+class MapViewController: AbstractViewController, MKMapViewDelegate, CLLocationManagerDelegate, UITableViewDelegate, UITableViewDataSource, SearchDelegateDelegate {
     
     @IBOutlet var mapView: MKMapView!
     @IBOutlet var mapViewHeightConstraint: NSLayoutConstraint!
@@ -23,6 +23,8 @@ class MapViewController: AbstractViewController, MKMapViewDelegate, CLLocationMa
     private var worksites: [Worksite] = []
     
     private var container: FUIDetailPanelContainer!
+    
+    private var searchDelegate: SearchDelegate!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,10 +44,14 @@ class MapViewController: AbstractViewController, MKMapViewDelegate, CLLocationMa
             self.navigationController?.pushViewController(DetailViewController(), animated: true)
         }
         
-        container.searchResultsViewController.tableView.dataSource = self
-        container.searchResultsViewController.tableView.delegate = self
+        searchDelegate = SearchDelegate(tableView: container.searchResultsViewController.tableView, searchBar: container.searchResultsViewController.searchBar)
+        searchDelegate.delegate = self
+        
+        container.searchResultsViewController.tableView.dataSource = searchDelegate
+        container.searchResultsViewController.tableView.delegate = searchDelegate
+        container.searchResultsViewController.searchBar.delegate = searchDelegate
+        
         container.searchResultsViewController.tableView.register(FUIObjectTableViewCell.self, forCellReuseIdentifier: FUIObjectTableViewCell.reuseIdentifier)
-        container.searchResultsViewController.searchBar.delegate = self
         
         container.contentViewController.subheadlineText = "Subheadline Text"
         container.contentViewController.tableView.delegate = self
@@ -72,8 +78,10 @@ class MapViewController: AbstractViewController, MKMapViewDelegate, CLLocationMa
             return
         }
         
-        self.worksites = headers.flatMap { Worksite(salesOrderHeader: $0) }
+        worksites = headers.flatMap { Worksite(salesOrderHeader: $0) }
         
+        searchDelegate.worksites = worksites
+
         mapView.addAnnotations(worksites)
     }
     
@@ -158,6 +166,25 @@ class MapViewController: AbstractViewController, MKMapViewDelegate, CLLocationMa
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return UITableViewCell()
+    }
+    
+    // MARK: - SearchDelegateDelegate
+    
+    func didSelect(worksite: Worksite) {
+        guard let annotation = mapView.annotations.first(where: { (annotation) -> Bool in
+            guard let view = self.mapView.view(for: annotation),
+                let worksiteView = view as? WorksiteMarker else {
+                return false
+            }
+            
+            return worksiteView.worksite?.salesOrderHeader.customerID == worksite.salesOrderHeader.customerID
+        }) else {
+            return
+        }
+        
+        view.endEditing(true)
+        
+        mapView.selectAnnotation(annotation, animated: true)
     }
     
 }

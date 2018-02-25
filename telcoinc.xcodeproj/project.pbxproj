@@ -12,6 +12,7 @@
 		03B903822042F8D4005B5863 /* AbstractViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B903812042F8D4005B5863 /* AbstractViewController.swift */; };
 		08DF6D3B2042E4E4000C7AD7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DF6D3A2042E4E4000C7AD7 /* MapViewController.swift */; };
 		08DF6D3D2042F5A4000C7AD7 /* Worksite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DF6D3C2042F5A4000C7AD7 /* Worksite.swift */; };
+		08DF6D3F204314ED000C7AD7 /* SearchDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DF6D3E204314ED000C7AD7 /* SearchDelegate.swift */; };
 		09F84DC1C06D2C305E6CE8FD /* ESPMContainerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED55335E4ABB7FF61352FDEE /* ESPMContainerFactory.swift */; };
 		126C8F6345CD75547E784FFE /* SalesOrderHeadersDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CEB4DCD96B4FC68833B5C /* SalesOrderHeadersDetailViewController.swift */; };
 		1277F7611F8E66AF0060AF58 /* SAPLogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1277F7601F8E66AC0060AF58 /* SAPLogo@2x.png */; };
@@ -117,6 +118,7 @@
 		03B903812042F8D4005B5863 /* AbstractViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractViewController.swift; sourceTree = "<group>"; };
 		08DF6D3A2042E4E4000C7AD7 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		08DF6D3C2042F5A4000C7AD7 /* Worksite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Worksite.swift; sourceTree = "<group>"; };
+		08DF6D3E204314ED000C7AD7 /* SearchDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDelegate.swift; sourceTree = "<group>"; };
 		0A5B82942687D07B19A5A3D4 /* SuppliersMasterViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SuppliersMasterViewController.swift; path = Suppliers/SuppliersMasterViewController.swift; sourceTree = "<group>"; };
 		1277F7601F8E66AC0060AF58 /* SAPLogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SAPLogo@2x.png"; sourceTree = "<group>"; };
 		128604D91E55B41600C698B5 /* SAPCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SAPCommon.framework; sourceTree = "<group>"; };
@@ -370,6 +372,7 @@
 				7A1315C61D4B982000A5DA56 /* Info.plist */,
 				ECEF37202042FB3D007EA4CE /* GeolocationViewController.swift */,
 				08DF6D3C2042F5A4000C7AD7 /* Worksite.swift */,
+				08DF6D3E204314ED000C7AD7 /* SearchDelegate.swift */,
 			);
 			path = telcoinc;
 			sourceTree = "<group>";
@@ -549,6 +552,7 @@
 				128B53061F8E667000E64DF6 /* SnapshotViewController.swift in Sources */,
 				12E84FE51F4ECF220061C99E /* OnboardingManager.swift in Sources */,
 				7A9F6FF61F3883D3000A1815 /* SAPFioriLoadingIndicator.swift in Sources */,
+				08DF6D3F204314ED000C7AD7 /* SearchDelegate.swift in Sources */,
 				7A26CA1C1F31BA8800B156B6 /* CellCreationHelper.swift in Sources */,
 				12E07EF21E96851800460A94 /* CollectionType.swift in Sources */,
 				75AC42D41DAF824D00B445FF /* CollectionsViewController.swift in Sources */,
