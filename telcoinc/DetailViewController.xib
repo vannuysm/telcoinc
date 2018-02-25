@@ -12,7 +12,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController" customModule="telcoinc" customModuleProvider="target">
             <connections>
-                <outlet property="closeAction" destination="Vf4-D2-g51" id="dQ0-Pd-zH6"/>
                 <outlet property="tableView" destination="O2M-7c-LXT" id="ZTI-SP-2vD"/>
                 <outlet property="view" destination="iN0-l3-epB" id="KF3-ft-Wcq"/>
             </connections>

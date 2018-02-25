@@ -67,9 +67,8 @@ class DetailViewController: AbstractViewController {
     func loadData() {
         let query = DataQuery()
             .filter(SalesOrderItem.salesOrderID.equal("500000110"))
-        //let query2 = DataQuery().selectAll()
-        provider.fetchSalesOrderItems(matching: query) { (items, error) in
-            var item = items?.first
+         provider.fetchSalesOrderItems(matching: query) { (items, error) in
+            //var item = items?.first
             self.data = items ?? []
             self.tableView.reloadData()
             print("")
