@@ -14,6 +14,8 @@ class DetailViewController: AbstractViewController {
     
     var objectHeader: FUIObjectHeader!
     
+    var data: [SalesOrderItem] = []
+    
     @IBOutlet weak var tableView: UITableView!
     
     init() {
@@ -57,8 +59,21 @@ class DetailViewController: AbstractViewController {
             
         }
         
+        loadData()
     }
     
+    //MARK: DATA
+    
+    func loadData() {
+        let query = DataQuery().filter(SalesOrderItem.salesOrderID.equal("500000110")).expand(SalesOrderItem.productDetails).expand(SalesOrderItem.productDetails)
+        //let query2 = DataQuery().selectAll()
+        provider.fetchSalesOrderItems(matching: query) { (items, error) in
+            var item = items?.first
+            self.data = items ?? []
+            self.tableView.reloadData()
+            print("")
+        }
+    }
     
 }
 
@@ -66,16 +81,20 @@ extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
     //MARK: UITableViewDataSource
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return data.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: FUIObjectTableViewCell.reuseIdentifier, for: indexPath) as! FUIObjectTableViewCell
         
-        cell.headlineText = "Speed Mouse"
-        cell.subheadlineText = "HT-1061"
-        cell.descriptionText = "Optical USB, PS/2 Mouse, Color: Blue, 3-button-functionality (incl. Scroll wheel)"
-        cell.statusText = "7.00 USD"
+        let item = data[indexPath.row]
+        
+        let number = item.itemNumber ?? 0
+        cell.headlineText = "Item \(number)"
+        cell.subheadlineText = item.productID ?? ""//"HT-1061"
+        let netAmout = item.netAmount?.doubleValue() ?? 0
+        let currency = item.currencyCode ?? ""
+        cell.statusText = "\(netAmout) \(currency)"//"7.00 USD"
         cell.substatusText = "In Stock"
         cell.substatusLabel.textColor = .preferredFioriColor(forStyle: .positive)
         cell.accessoryType = .none
