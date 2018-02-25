@@ -11,14 +11,14 @@ import MapKit
 import SAPFiori
 import CoreLocation
 
-class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
+class MapViewController: AbstractViewController, MKMapViewDelegate, CLLocationManagerDelegate, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
     @IBOutlet var mapView: MKMapView!
     @IBOutlet var mapViewHeightConstraint: NSLayoutConstraint!
     
     private let locationManager = CLLocationManager()
     private var current: CLLocation?
-    private let regionRadius: CLLocationDistance = 1000
+    private let regionRadius: CLLocationDistance = 10000
     
     private var worksites: [Worksite] = []
     
@@ -67,11 +67,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     }
     
     func getWorksites() {
-        guard let container = (UIApplication.shared.delegate as! AppDelegate).espmContainer else {
-            return
-        }
-        
-        guard let headers = try? container.fetchSalesOrderHeaders() else {
+        guard let headers = try? provider.fetchSalesOrderHeaders() else {
             return
         }
         
